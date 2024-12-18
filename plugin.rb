@@ -31,7 +31,7 @@ module ::DiscoursePrivateTopics
     Category.find_each do |category|
       category.topics.find_each do |topic|
         # Пропускаем тему с определенным ID
-        next if topic.id == EXCLUDED_TOPIC_ID 
+        #next if topic.id == EXCLUDED_TOPIC_ID 
         
         # Пропускаем, если тема уже скрыта
         next if @@hidden_topics_cache.include?(topic.id)
